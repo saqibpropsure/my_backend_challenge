@@ -24,14 +24,6 @@ return new class extends Migration
             $table->string('published_at')->nullable();
             $table->longText('category')->nullable();
             $table->text('content')->nullable();
-            // $table->string('section_id')->nullable();
-            // $table->string('settings')->nullable();
-            // $table->text('api_url')->nullable();
-            // $table->string('pillar_id')->nullable();
-            // $table->string('pillar_name')->nullable();
-            // $table->string('section')->nullable();
-            // $table->string('sub_section')->nullable();
-
             $table->timestamps();
         });
     }

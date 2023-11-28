@@ -13,8 +13,9 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('daily-news:get')->daily(); // Run the command daily
+
     }
-    
+
 
     /**
      * Register the commands for the application.
@@ -26,5 +27,5 @@ class Kernel extends ConsoleKernel
         require base_path('routes/console.php');
     }
 
-   
+
 }

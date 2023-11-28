@@ -16,6 +16,7 @@ class GetDailyNewsCommand extends Command
     protected $signature = 'daily-news:get';
     protected $timeout = 120;
 
+
     /**
      * The console command description.
      *
@@ -55,10 +56,10 @@ class GetDailyNewsCommand extends Command
         }
 
         echo('News Api Done!');
-      
+
         if(!empty($guardianApiData['response']['results']) && $guardianApiData['response']['status'] == 'ok') {
             foreach($guardianApiData['response']['results'] as $article) {
-            
+
                 Article::create([
                     'end_point' => 'Guardian Api',
                     'source' => json_encode($article['id']) ?? null,
@@ -76,7 +77,7 @@ class GetDailyNewsCommand extends Command
         }
 
         echo('Guardian Api Done!');
-      
+
          if(!empty($nyTimesApiData['results']) && $nyTimesApiData['status'] == 'OK') {
                 foreach($nyTimesApiData['results'] as $article) {
                     Article::create([

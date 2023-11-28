@@ -24,5 +24,7 @@ class ArticleController extends Controller
             'message'   => 'Articles Data',
             'articles'  => $articles
         ]);
+
+
     }
 }
